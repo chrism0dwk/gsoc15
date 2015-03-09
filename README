@@ -1,0 +1,26 @@
+Google Summer of Code 2015, InFER project tests
+===============================================
+
+This repository contains the test code for test 2 of the
+InFER GSOC 2015 project.  The file unitTest.cpp requires an 
+implementation of Pdf class hierarchy.  The file Pdf.hpp contains
+the interface to a set of derived classes returning the probability 
+distribution function of various probability distributions.
+
+Class Pdf is a pure virtual class declaring the virtual method
+
+virtual double Pdf::pdf(const double x)
+
+This method returns the value of the pdf for a probability 
+distribution f(x; theta) given a value of the associated random
+variable x with parameters theta (set in the constructor).
+
+Test 2 requires that Pdf.cpp is modified, with derived classes 
+"Normal" and "Gamma" implemented.  Note that Pdf::pdf(const double x) is 
+pure virtual so that derived classes are forced to provide their own
+implementations of the appropriate pdf.
+
+Test 3 requires the development of a Makefile to compile both Pdf.hpp 
+and unitTest.cpp into a binary executable.
+
+Question to Chris Jewell <chrism0dwk@gmail.com>
